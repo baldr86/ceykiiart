@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<section id="galeria">
+<div class="row">
+    <div class="col-lg-6">
+        
+        {% for imagen in imagenes  %}
+            <img height="500px" src="{{imagen.imagen.url}}" alt=""> 
+            
+        {% endfor %}
+            
+        <img src="" alt="">
+    </div>
+</div>
+
+</section>
+
+
+
+{% endblock %}

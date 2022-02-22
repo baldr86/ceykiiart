@@ -1,5 +1,10 @@
 from django.shortcuts import render
 
+from .models import Imagen
+
 
 def index(request):
-        return render(request, "index.html")
+
+        imagenes = Imagen.objects.all()
+
+        return render(request, "ilustration.html", {'imagenes': imagenes})
