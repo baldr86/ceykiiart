@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Imagen
+from .models import FanArt, OriginalWork 
 
-
-admin.site.register(Imagen)
+admin.site.register(FanArt)
+admin.site.register(OriginalWork)

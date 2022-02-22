@@ -6,6 +6,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('index/', views.index, name = "index"),
+    path('fanart/', views.fanArt, name = "fan art"),
+    path('originalwork/', views.originalWork, name = "original work"),
     
 ]
 
