@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<h3>Editar Perfil</h3>
+
+<form action="" method="POST">
+    {% csrf_token %}
+
+    <table>
+         {{ myForm.as_table }}
+    </table>
+
+    <input type="submit", value="Modificar">
+</form>
+
+
+
+
+{% endblock %}

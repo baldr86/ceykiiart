@@ -1,8 +1,11 @@
-from distutils.command.upload import upload
+from django.contrib.auth.models import User
 from django.db import models
 from django.shortcuts import reverse
 from django.template.defaultfilters import slugify
 
+
+
+#modelos de los diferentes tipos de trabajos graficos subidos
 
 class FanArt (models.Model):
     titulo = models.TextField(max_length=100)
@@ -41,3 +44,13 @@ class OriginalWork (models.Model):
             
             'slug': self.slug
             })
+
+
+#modelo para usuario
+class Avatar(models.Model):
+
+    user = models.ForeignKey(User, on_delete= models.CASCADE)
+    imagen = models.ImageField(upload_to='avatar', null=True, blank = True)
+
+    def __str__(self):
+        return f"Imagen de: {self.user.username}"

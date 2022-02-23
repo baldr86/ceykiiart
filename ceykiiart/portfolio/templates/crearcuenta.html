@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+{% load static %}
+
+    <title>Registro socio</title>
+    <h2 style="color:orangered">Ingresa los siguientes datos:</h2>
+    <form action="" method = "POST">
+        {% csrf_token %}
+        {{ form.as_p}}
+        
+        <button type="sumbit">Registrate!!!</button>
+    </form>
+
+
+
+{% endblock %}

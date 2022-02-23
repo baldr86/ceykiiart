@@ -6,8 +6,17 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('index/', views.index, name = "index"),
+    
+    #TRABAJO
     path('fanart/', views.fanArt, name = "fan art"),
     path('originalwork/', views.originalWork, name = "original work"),
+
+    #PERFIL
+    path('perfil/', views.perfil, name ="perfil"),
+    path('crearperfil/', views.crearUser, name = "crear perfil"),
+    path('editarperfil/', views.editarPerfil, name = "editar perfil")
+
+    
     
 ]
 
